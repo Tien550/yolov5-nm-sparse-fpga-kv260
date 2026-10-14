@@ -1,0 +1,13 @@
+# PKLot dataset config for YOLOv5
+# IMPORTANT: Use forward slashes (/) on Windows, NOT backslashes!
+
+path: ../datasets/pklot  # Đường dẫn root tương đối từ thư mục yolov5
+train: train/images       # Thư mục ảnh train
+val: valid/images         # Thư mục ảnh validation
+test: test/images         # Optional: thư mục test
+
+# Classes
+nc: 2
+names:
+  0: space-empty
+  1: space-occupied

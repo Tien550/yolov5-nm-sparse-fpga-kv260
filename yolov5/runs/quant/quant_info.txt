@@ -1,0 +1,27 @@
+BREVITAS QUANT MODEL - INFO
+==================================================
+
+Source FP32 model: runs/export/pruned_fused.pt
+Quant state_dict:  runs\quant\quant_state_dict.pt
+
+CONVERSION:
+  Total Conv2d before: 62
+  Detect head (converted): 3
+  Converted to Quant:  63
+  Including depthwise: 8
+
+AFTER:
+  Pure nn.Conv2d:   0
+  qnn.QuantConv2d:  63
+
+HOW TO LOAD QUANT MODEL IN OTHER SCRIPTS:
+  1. Import convert_model from convert_to_quant
+     from convert_to_quant import convert_model
+  2. Load FP32 fused model:
+     ckpt = torch.load('runs/export/pruned_fused.pt', weights_only=False)
+     model = ckpt['model'].float()
+  3. Convert to quant structure:
+     convert_model(model)
+  4. Load state_dict:
+     state = torch.load('runs\quant\quant_state_dict.pt', weights_only=True)
+     model.load_state_dict(state['state_dict'], strict=False)

@@ -1,0 +1,5 @@
+train: D:/yolov5-fpga/datasets/pklot/train/images
+val: D:/yolov5-fpga/datasets/pklot/valid/images
+
+nc: 2
+names: ['space-empty', 'space-occupied']

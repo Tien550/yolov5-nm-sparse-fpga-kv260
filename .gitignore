@@ -1,0 +1,30 @@
+# --- Local tooling / env ---
+.claude/
+.vscode/
+venv/
+__pycache__/
+*.py[cod]
+.Xil/
+*.log
+*.jou
+*.bak*
+
+# --- Dataset (14 GB) — download PKLot from Roboflow; keep config + readme only ---
+datasets/**/train/
+datasets/**/valid/
+datasets/**/test/
+
+# --- Vivado generated project (regenerate with rev76_build/build174.tcl + tcl_archive/) ---
+rev76_build/bd_cnn_acc/
+
+# --- Bitstreams: only the production build is tracked ---
+*.bit
+!rev76_build/bd_wrapper_rev174_resident_200.bit
+
+# --- Third-party papers (copyrighted) — see README for references ---
+Docs/An FPGA-Based YOLOv5 Accelerator for Real-Time Industrial.pdf
+Docs/DominoSearch.pdf
+Docs/Efficient Layer-Wise NM Sparse CNN Accelerator with Flexible.pdf
+
+# --- Upstream Ultralytics CI ---
+yolov5/.github/
