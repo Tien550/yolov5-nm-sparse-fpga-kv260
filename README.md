@@ -1,5 +1,7 @@
 # YOLOv5s N:M Sparse Accelerator on Kria KV260
 
+Parking-slot detection with N:M sparse YOLOv5s on Kria KV260 FPGA.
+
 Bộ tăng tốc phần cứng (RTL Verilog) cho YOLOv5s-Lite INT8 với trọng số thưa N:M theo từng lớp
 (kiến trúc kiểu I-SPEC), triển khai trên **Xilinx Kria KV260**, ứng dụng phát hiện chỗ đỗ xe (PKLot).
 
